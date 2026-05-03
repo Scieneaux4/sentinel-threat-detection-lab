@@ -1,11 +1,8 @@
 # Microsoft Sentinel Threat Detection Lab
 ---
 
-In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor and analyze authentication activity from a Windows virtual machine.
+In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor and analyze authentication activity from a Windows virtual machine. The virtual machine was intentionally exposed to the internet as a honeypot to attract and capture real-world login attempts. The goal of this lab was to simulate real attack behavior and gain hands-on experience working with logs, detecting suspicious activity, and understanding how security events are investigated in a SOC environment.
 
-The virtual machine was intentionally exposed to the internet as a honeypot to attract and capture real-world login attempts.
-
-The goal of this lab was to simulate real attack behavior and gain hands-on experience working with logs, detecting suspicious activity, and understanding how security events are investigated in a SOC environment.
 ---
 
 ## 📸 Screenshots & Walkthrough
