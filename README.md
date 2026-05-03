@@ -10,7 +10,7 @@ In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor
 ### 1️⃣ Authentication Logs Ingested
 ![Logs](insert-image-link)
 
-This screenshot shows Windows Security logs successfully ingested into Microsoft Sentinel. These logs include authentication events such as logon attempts, which serve as the foundation for detecting suspicious or potentially malicious activity.
+This screenshot shows Windows Security Event logs successfully ingested into Microsoft Sentinel. The logs include authentication activity such as successful (Event ID 4624) and failed (Event ID 4625) login attempts, forming the foundation for detecting suspicious behavior.
 
 ---
 
