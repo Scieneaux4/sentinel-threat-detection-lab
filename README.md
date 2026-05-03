@@ -24,7 +24,7 @@ Here, I filtered for failed login attempts (Event ID 4625) to identify repeated 
 ### 3️⃣ Successful Login Events (Event ID 4624)
 ![Successful Logins](insert-image-link)
 
-This query aggregates failed login attempts over a defined time window to identify potential brute-force attacks. By grouping authentication failures by IP address and time interval, it highlights sources generating unusually high volumes of failed logins, which may indicate malicious activity targeting the system.
+This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
 
 ---
 
