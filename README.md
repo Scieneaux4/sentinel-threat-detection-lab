@@ -29,14 +29,14 @@ I identified a single IP address (9.134.72.62) responsible for 38 failed login a
 ---
 
 ### 4️⃣ Detection Query
-![Detection Rule](./Detectrule.png)
+![Incident Dashboard](./incidentboard.png)
 
 This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
 
 ---
 
 ### 5️⃣ Alert / Detection Rule
-![Alert](insert-image-link)
+![Detection Rule](./Detectrule.png)
 
 I configured an alert rule in Microsoft Sentinel to trigger when suspicious login activity is detected. This allows for automated detection and helps simulate how alerts would be generated in a real SOC environment.
 
