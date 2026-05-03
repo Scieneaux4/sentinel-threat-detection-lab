@@ -24,14 +24,14 @@ Here, I filtered for failed login attempts (Event ID 4625) to identify repeated 
 ### 3️⃣ Successful Login Events (Event ID 4624)
 ![Successful Logins](insert-image-link)
 
-This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
+I identified a single IP address (9.134.72.62) responsible for 38 failed login attempts followed by 14 successful authentications. This pattern strongly indicates brute-force activity, where an attacker repeatedly attempts credentials until successfully gaining access.
 
 ---
 
 ### 4️⃣ Detection Query
 ![Query](insert-image-link)
 
-The investigation panel provides context around a high-severity alert generated after multiple failed login attempts were followed by a successful authentication. The associated IP address and geolocation data help identify the source of the activity and support further analysis of potential credential compromise.
+This screenshot shows a triggered Microsoft Sentinel incident for a successful login following multiple failed attempts. This detection highlights potential brute-force behavior where an attacker repeatedly attempts authentication before eventually gaining access. The alert includes relevant details such as severity, associated IP address, and event correlation, demonstrating how security analysts identify and prioritize threats in a SOC environment.
 
 ---
 
