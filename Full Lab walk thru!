@@ -1,5 +1,5 @@
-🧪 Lab Walkthrough
-🔧 1. Environment Setup
+🧪 Lab Walkthrough:
+1. Environment Setup
 Created a Windows Virtual Machine in Microsoft Azure
 Configured the VM to act as a honeypot by exposing it to the internet
 Deployed Microsoft Sentinel and connected it to a Log Analytics Workspace
@@ -7,7 +7,7 @@ Enabled log collection for security monitoring
 
 📌 Goal: Simulate a real-world endpoint and attract external authentication attempts
 
-📥 2. Log Collection and Ingestion
+2. Log Collection and Ingestion
 Ingested Windows Security Event logs into Microsoft Sentinel
 Verified presence of:
 Event ID 4624 (Successful Logins)
@@ -16,7 +16,7 @@ Confirmed logs were flowing correctly from the VM
 
 📌 Outcome: Established reliable visibility into authentication activity
 
-🚨 3. Identifying Failed Login Activity
+3. Identifying Failed Login Activity
 Filtered logs for Event ID 4625 (failed login attempts)
 Observed:
 Repeated login attempts from the same IP addresses
@@ -25,7 +25,7 @@ Recognized behavior consistent with brute force attacks
 
 📌 Insight: Repeated failures from a single source indicate suspicious activity
 
-🔍 4. Correlating Successful Logins After Failures
+ 4. Correlating Successful Logins After Failures
 Combined analysis of:
 Failed logins (4625)
 Successful logins (4624)
@@ -35,7 +35,7 @@ Determined this sequence suggests credential compromise
 
 📌 Insight: A success after repeated failures significantly increases threat severity
 
-⚙️ 5. Detection Rule Creation
+ 5. Detection Rule Creation
 Created a KQL-based detection rule in Microsoft Sentinel
 Logic included:
 Multiple failed login attempts
@@ -45,7 +45,7 @@ Configured rule to automatically trigger alerts
 
 📌 Impact: Automated detection of brute force attack behavior
 
-🛑 6. Security Incident Generation
+ 6. Security Incident Generation
 Detection rule triggered a security incident in Sentinel
 Incident included:
 Source IP address
@@ -55,7 +55,7 @@ Enabled centralized alert tracking
 
 📌 Outcome: Converted raw log data into actionable alerts
 
-🧠 7. Investigation and Analysis
+7. Investigation and Analysis
 Reviewed incident within Microsoft Sentinel
 Analyzed:
 Timeline of login activity
@@ -65,7 +65,7 @@ Validated the attack pattern
 
 📌 SOC Perspective: Mirrors real-world incident investigation workflow
 
-🌍 8. Visualizing Attack Activity
+ 8. Visualizing Attack Activity
 Used Sentinel workbook to generate a geographic activity map
 Observed:
 Login attempts from multiple global regions
@@ -84,9 +84,9 @@ Alert generation and incident creation
 Investigation and analysis of suspicious activity
 Visualization of attack patterns
 
-💡 This lab reflects real-world SOC analyst responsibilities and highlights the importance of continuous monitoring and automated detection in cybersecurity operations
+This lab reflects real-world SOC analyst responsibilities and highlights the importance of continuous monitoring and automated detection in cybersecurity operations
 
-🧠 Skills Demonstrated
+Skills Demonstrated
 Microsoft Sentinel (SIEM)
 Log Analysis (Event IDs 4624 & 4625)
 KQL Query Development
