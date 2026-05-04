@@ -9,7 +9,7 @@ In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor
 ### 1. Authentication Logs Ingested
 ![Authentication Logs](screenshots/Microsoftevents.png)
 
-This screenshot shows Windows Security Event logs being successfully ingested into Microsoft Sentinel from the virtual machine. I verified that both successful logins (Event ID 4624) and failed login attempts (Event ID 4625) were present in the data. This confirmed that log ingestion was working correctly and that authentication activity could be monitored within the environment.
+Windows Security Event logs were successfully ingested into Microsoft Sentinel from the virtual machine. I verified that both successful logins (Event ID 4624) and failed login attempts (Event ID 4625) were present in the data. This confirmed that log ingestion was working correctly and that authentication activity could be monitored within the environment.
 
 ---
 ### 2. Failed Login Attempts (Event ID 4625)
