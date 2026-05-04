@@ -7,21 +7,21 @@ In this project, I built a SIEM lab using Microsoft Sentinel in Azure to monitor
 ## 📸 Screenshots & Walkthrough
 
 ### 1. Authentication Logs Ingested
-
+![Authentication Logs](Microsoftevents.png)
 
 This screenshot shows Windows Security Event logs being successfully ingested into Microsoft Sentinel from the virtual machine. I verified that both successful logins (Event ID 4624) and failed login attempts (Event ID 4625) were present in the data. At this stage, my main goal was to confirm that log ingestion was working correctly, since everything else in the lab depends on having reliable data. Seeing both event types confirmed that I would be able to monitor authentication activity and later detect suspicious patterns such as brute-force login attempts.
 
 ---
 
 ### 2. Failed Login Attempts (Event ID 4625)
-
+![Failed Logins](Failedattempts.png)
 
 In this step, I filtered specifically for failed login attempts (Event ID 4625) to look for patterns of repeated authentication failures. What stood out was the number of attempts coming from the same IP addresses within short time windows. This kind of behavior is not typical for normal users and is commonly associated with brute-force attacks, where an attacker repeatedly tries different credentials hoping to gain access. By narrowing the data down this way, I was able to quickly identify which IPs were behaving suspiciously and worth investigating further.
 
 ---
 
 ### 3. Successful Login Events (Event ID 4624)
-
+![Successful Brute Force](successbrute.png)
 
 Here, I expanded the analysis by including successful login events (Event ID 4624) alongside failed attempts. This allowed me to identify a key pattern: a single IP address generated multiple failed login attempts and then eventually succeeded. That sequence is a strong indicator of a successful brute-force attack, where the attacker eventually guesses the correct credentials. Being able to correlate failed and successful logins is important because failed attempts alone don’t always mean a compromise — but when followed by a success, it significantly raises the severity of the activity.
 
