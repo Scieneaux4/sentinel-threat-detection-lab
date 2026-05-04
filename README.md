@@ -19,7 +19,7 @@ In this step, I filtered specifically for failed login attempts (Event ID 4625) 
 
 ---
 
-### 3. Successful Login Events (Event ID 4624)
+### 3. Successful Bruteforce Login Events (Event ID 4624)
 ![Successful Brute Force](screenshots/successbrute.png)
 
 Here, I expanded the analysis by including successful login events (Event ID 4624) alongside failed attempts. This allowed me to identify a key pattern where a single IP address generated multiple failed login attempts and then eventually succeeded. This sequence is a strong indicator of a successful brute force attack, where the attacker is able to guess the correct credentials after repeated attempts. Correlating failed and successful logins provides stronger evidence of compromise than failed attempts alone.
