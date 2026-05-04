@@ -23,7 +23,7 @@ Windows Security Event logs were successfully ingested into Microsoft Sentinel f
 
 ![Successful Logins](screenshots/Succorfailbrut.png)
 
-This query looks for suspicious login activity by analyzing Windows Security Events. It tracks failed (Event ID 4625) and successful (Event ID 4624) login attempts from the same IP address and highlights cases where multiple failures are followed by a successful login. This type of pattern may indicate brute force attempts or credential compromise and is something SOC analysts commonly monitor as a potential sign of unauthorized access.
+This query looks for suspicious login activity by analyzing Windows Security Events. It tracks failed (Event ID 4625) and successful (Event ID 4624) login attempts from the same IP address and highlights cases where multiple failures are followed by a successful login. This type of pattern may indicate potential brute force attempts or credential compromise and is something SOC analysts commonly monitor as a potential sign of unauthorized access.
 
 ---
 
