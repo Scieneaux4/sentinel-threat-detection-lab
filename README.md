@@ -22,7 +22,7 @@ Windows Security Event logs were successfully ingested into Microsoft Sentinel f
 ### 3. Successful Bruteforce Login Events (Event ID 4624)
 ![Successful Brute Force](screenshots/successbrute.png)
 
-Here, I expanded the analysis by including successful login events (Event ID 4624) alongside failed attempts. This allowed me to identify a key pattern where a single IP address generated multiple failed login attempts and then eventually succeeded. This sequence is a strong indicator of a successful brute force attack, where the attacker is able to guess the correct credentials after repeated attempts. Correlating failed and successful logins provides stronger evidence of compromise than failed attempts alone.
+This query looks for suspicious login activity by analyzing Windows Security Events. It tracks failed (Event ID 4625) and successful (Event ID 4624) login attempts from the same IP address and highlights cases where multiple failures are followed by a successful login. This type of pattern may indicate brute force attempts or credential compromise and is something SOC analysts commonly monitor as a potential sign of unauthorized access.
 
 ---
 
